@@ -307,6 +307,8 @@ static void plus2header (int model)
     printf (" +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+\n") ;
   else if (model == PI_MODEL_3P)
     printf (" +-----+-----+---------+------+---+---Pi 3+--+---+------+---------+-----+-----+\n") ;
+  else if (model == PI_MODEL_3A)
+    printf (" +-----+-----+---------+------+---+---Pi 3A--+---+------+---------+-----+-----+\n") ;
   else
     printf (" +-----+-----+---------+------+---+---Pi ?---+---+------+---------+-----+-----+\n") ;
 }
@@ -352,7 +354,7 @@ void doReadall (void)
     abReadall (model, rev) ;
   else if ((model == PI_MODEL_BP) || (model == PI_MODEL_AP) ||
 	(model == PI_MODEL_2) ||
-	(model == PI_MODEL_3) || (model == PI_MODEL_3P) ||
+	(model == PI_MODEL_3) || (model == PI_MODEL_3P) || (model == PI_MODEL_3A) ||
 	(model == PI_MODEL_ZERO) || (model == PI_MODEL_ZERO_W))
     piPlusReadall (model) ;
   else if ((model == PI_MODEL_CM) || (model == PI_MODEL_CM3))
